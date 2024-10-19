@@ -1,0 +1,19 @@
+from collections import deque
+
+class Colas:
+    def __init__(self):
+        self.cola = deque()
+
+    def agregar_elementos(self):
+
+        for i in range(1, 11):
+            self.cola.append(i) 
+
+    def procesar_cola(self):
+
+        while len(self.cola) > 0:
+            print(self.cola.popleft())
+
+cola = Colas()
+cola.agregar_elementos()
+cola.procesar_cola()
